@@ -108,4 +108,64 @@
       padding: 9px 14px;
       border-radius: 999px;
       border: none;
-      background:
+      background: var(--accent);
+      color: white;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+    }
+
+    button[type="submit"]:hover {
+      background: var(--accent-dark);
+    }
+
+    small {
+      font-size: 12px;
+      color: #9ca3af;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <h1>Join as a provider</h1>
+      <a href="index.html">← Back to home</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="card">
+      <p>
+        If you offer house cleaning, groceries, or meal prep services in Gatineau and would like
+        to be listed on Vivesta, share a few details below.
+      </p>
+      <p>We’ll review your information and follow up by email.</p>
+
+      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <label>
+          Your name
+          <input type="text" name="name" required>
+        </label>
+
+        <label>
+          Email
+          <input type="email" name="email" required>
+        </label>
+
+        <label>
+          Services you offer
+          <input type="text" name="services" placeholder="House cleaning, groceries, meal prep…" required>
+        </label>
+
+        <label>
+          Tell us more
+          <textarea name="message" placeholder="Areas you serve, languages, typical rates, availability…"></textarea>
+        </label>
+
+        <button type="submit">Send</button>
+        <small>You can also email us directly at: hello@vivesta.ca</small>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
