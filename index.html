@@ -1,204 +1,235 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2575.7">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; -webkit-text-stroke: #000000}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; -webkit-text-stroke: #000000; min-height: 14.0px}
-    span.s1 {font-kerning: none}
+  <meta charset="UTF-8">
+  <title>Vivesta – Senior Home Services Directory | Gatineau, QC</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    :root {
+      --bg: #f5f5f7;
+      --text: #111827;
+      --muted: #4b5563;
+      --accent: #2563eb;
+      --accent-dark: #1d4ed8;
+      --card: #ffffff;
+      --border: #e5e7eb;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    header {
+      padding: 24px 16px 32px;
+      background: #111827;
+      color: white;
+    }
+
+    .header-inner {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .brand {
+      font-size: 26px;
+      font-weight: 700;
+      margin: 0 0 8px;
+    }
+
+    .tagline {
+      margin: 0 0 16px;
+      font-size: 16px;
+      max-width: 520px;
+      line-height: 1.4;
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .cta-primary,
+    .cta-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 18px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 500;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .cta-primary {
+      background: var(--accent);
+      color: white;
+      border: none;
+    }
+
+    .cta-primary:hover {
+      background: var(--accent-dark);
+    }
+
+    .cta-secondary {
+      background: transparent;
+      color: white;
+      border: 1px solid rgba(255,255,255,0.4);
+    }
+
+    main {
+      max-width: 960px;
+      margin: 24px auto 40px;
+      padding: 0 16px;
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(0, 1.4fr);
+      gap: 20px;
+    }
+
+    @media (max-width: 800px) {
+      main {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.05);
+      padding: 18px 18px 20px;
+    }
+
+    h2 {
+      margin: 0 0 8px;
+      font-size: 18px;
+    }
+
+    p {
+      margin: 4px 0;
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      border-radius: 999px;
+      padding: 6px 10px;
+      font-size: 12px;
+      background: #eff6ff;
+      color: #1d4ed8;
+    }
+
+    .list {
+      margin-top: 8px;
+      padding-left: 18px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .list li {
+      margin-bottom: 4px;
+    }
+
+    .subsidy-highlight {
+      margin-top: 6px;
+      font-size: 14px;
+      color: #b45309;
+      background: #fffbeb;
+      border-radius: 8px;
+      padding: 8px 10px;
+      border: 1px solid #fbbf24;
+    }
+
+    footer {
+      max-width: 960px;
+      margin: 0 auto 24px;
+      padding: 0 16px;
+      font-size: 12px;
+      color: #6b7280;
+    }
+
+    footer a {
+      color: #4b5563;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
-<p class="p1"><span class="s1">&lt;!DOCTYPE html&gt;</span></p>
-<p class="p1"><span class="s1">&lt;html lang="en"&gt;</span></p>
-<p class="p1"><span class="s1">&lt;head&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;title&gt;Vivesta – Senior Home Services Directory | Gatineau, QC&lt;/title&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;style&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>:root {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>--bg: #f5f5f7;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>--text: #111827;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>--muted: #4b5563;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>--accent: #2563eb;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>--accent-dark: #1d4ed8;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>--card: #ffffff;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>--border: #e5e7eb;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>* {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>box-sizing: border-box;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>body {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin: 0;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background: var(--bg);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>color: var(--text);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>header {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding: 24px 16px 32px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background: #111827;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>color: white;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.header-inner {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>max-width: 960px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin: 0 auto;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.brand {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-size: 26px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-weight: 700;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin: 0 0 8px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.tagline {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin: 0 0 16px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-size: 16px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>max-width: 520px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>line-height: 1.4;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.cta-row {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>display: flex;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>flex-wrap: wrap;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>gap: 12px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>align-items: center;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.cta-primary,</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.cta-secondary {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>display: inline-flex;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>align-items: center;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>justify-content: center;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding: 10px 18px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border-radius: 999px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-size: 14px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-weight: 500;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>text-decoration: none;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>cursor: pointer;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.cta-primary {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background: var(--accent);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>color: white;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border: none;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.cta-primary:hover {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background: var(--accent-dark);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.cta-secondary {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background: transparent;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>color: white;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border: 1px solid rgba(255,255,255,0.4);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>main {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>max-width: 960px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin: 24px auto 40px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding: 0 16px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>display: grid;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>grid-template-columns: minmax(0, 2fr) minmax(0, 1.4fr);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>gap: 20px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>@media (max-width: 800px) {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>main {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>grid-template-columns: minmax(0, 1fr);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.card {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background: var(--card);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border-radius: 12px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border: 1px solid var(--border);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>box-shadow: 0 10px 25px rgba(15, 23, 42, 0.05);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding: 18px 18px 20px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>h2 {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin: 0 0 8px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-size: 18px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>p {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin: 4px 0;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-size: 14px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>color: var(--muted);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>line-height: 1.5;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.pill-row {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>display: flex;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>flex-wrap: wrap;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>gap: 8px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin-top: 10px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.pill {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>display: inline-flex;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>align-items: center;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border-radius: 999px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding: 6px 10px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-size: 12px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background: #eff6ff;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>color: #1d4ed8;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.list {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin-top: 8px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding-left: 18px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-size: 14px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>color: var(--muted);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.list li {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin-bottom: 4px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.subsidy-highlight {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin-top: 6px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-size: 14px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>color: #b45309;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background: #fffbeb;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border-radius: 8px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding: 8px 10px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border: 1px solid #fbbf24;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>footer {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>max-width: 960px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin: 0 auto 24px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding: 0 16px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-size: 12px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>color: #6b7280;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>footer a {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>color: #4b5563;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>text-decoration: none;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>footer a:hover {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>text-decoration: underline;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/head&gt;</span></p>
-<p class="p1"><span class="s1">&lt;body&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;header&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="header-inner"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;h1 class="brand"&gt;Vivesta&lt;/h1&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;p class="tagline"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>Simple directory of trusted local providers in Gatineau for seniors and caregivers.</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>Find help with house cleaning, groceries, and meal prep in just a</span></p>
+  <header>
+    <div class="header-inner">
+      <h1 class="brand">Vivesta</h1>
+      <p class="tagline">
+        Simple directory of trusted local providers in Gatineau for seniors and caregivers.
+        Find help with house cleaning, groceries, and meal prep in just a few clicks.
+      </p>
+      <div class="cta-row">
+        <a class="cta-primary" href="providers.html">Browse providers</a>
+        <a class="cta-secondary" href="subsidy.html">See subsidy options</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>What you can find on Vivesta</h2>
+      <p>Browse local people and small businesses offering in‑home support for seniors in Gatineau.</p>
+      <ul class="list">
+        <li>House cleaning (regular or occasional)</li>
+        <li>Grocery shopping and delivery</li>
+        <li>Meal preparation and light kitchen help</li>
+      </ul>
+      <div class="pill-row">
+        <span class="pill">Gatineau (Hull, Aylmer, etc.)</span>
+        <span class="pill">French / English</span>
+        <span class="pill">Independent providers</span>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Save with government subsidies</h2>
+      <p>
+        Many housekeeping and daily living services for seniors in Quebec can be partially covered
+        by provincial programs or tax credits.
+      </p>
+      <p class="subsidy-highlight">
+        Depending on the program and your situation, you may save 30–50% on eligible services.
+      </p>
+      <p>
+        We explain the main programs in plain language and show examples of how much you might pay
+        out of pocket after subsidies.
+      </p>
+      <div class="pill-row">
+        <a class="cta-primary" href="subsidy.html">Learn about subsidies</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Vivesta · Senior home services directory in Gatineau, QC.</p>
+  </footer>
 </body>
 </html>
