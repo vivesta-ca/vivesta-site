@@ -129,4 +129,178 @@
     }
 
     .provider-card h3 {
-      ma
+      margin: 0 0 4px;
+      font-size: 16px;
+      color: var(--text);
+    }
+
+    .meta-line {
+      margin: 2px 0;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .contact-btn {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 7px 12px;
+      font-size: 13px;
+      border-radius: 9999px;
+      background: var(--accent);
+      color: white;
+      text-decoration: none;
+    }
+
+    .contact-btn:hover {
+      background: var(--accent-dark);
+    }
+
+    .loading {
+      color: #6b7280;
+      font-size: 14px;
+    }
+
+    .error {
+      color: #b91c1c;
+      font-size: 14px;
+    }
+
+    .empty {
+      color: #6b7280;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <div class="header-title">
+        <h1>Providers</h1>
+        <span>Local helpers for seniors in Gatineau</span>
+      </div>
+      <div class="header-nav">
+        <a href="index.html">← Back to home</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="filters">
+      <span class="filters-label">Filter by service:</span>
+      <button class="pill active" data-service="all">All</button>
+      <button class="pill" data-service="House Cleaning">House cleaning</button>
+      <button class="pill" data-service="Groceries">Groceries</button>
+      <button class="pill" data-service="Meal Prep">Meal prep</button>
+    </section>
+
+    <section id="providers-list">
+      <h2 class="loading">Loading providers…</h2>
+    </section>
+  </main>
+
+  <script>
+    let allProviders = [];
+
+    function applyFilter(service) {
+      const pills = document.querySelectorAll(".pill");
+      pills.forEach(p => {
+        if (p.dataset.service === service) {
+          p.classList.add("active");
+        } else if (service === "all" && p.dataset.service === "all") {
+          p.classList.add("active");
+        } else if (service === "all" && p.dataset.service !== "all") {
+          p.classList.remove("active");
+        } else {
+          p.classList.remove("active");
+        }
+      });
+
+      if (service === "all") {
+        renderProviders(allProviders);
+        return;
+      }
+
+      const filtered = allProviders.filter(p => {
+        const services = (p.Services || "").toLowerCase();
+        return services.includes(service.toLowerCase());
+      });
+      renderProviders(filtered);
+    }
+
+    function renderProviders(list) {
+      const container = document.getElementById("providers-list");
+
+      if (!list || !list.length) {
+        container.innerHTML = `
+          <h2 class="empty">No providers found</h2>
+          <p class="empty">Try a different filter or check back soon.</p>
+        `;
+        return;
+      }
+
+      const cards = list.map(p => {
+        const name = p.Name || "Provider";
+        const services = p.Services || "";
+        const phone = p.Phone || "";
+        const email = p.Email || "";
+        const rate = p.Rate || "";
+        const area = p.Area || "Gatineau";
+
+        return `
+          <article class="provider-card">
+            <h3>${name}</h3>
+            <p class="meta-line">${rate ? rate + " · " : ""}${area}</p>
+            ${services ? `<p class="meta-line">${services}</p>` : ""}
+            ${phone ? `<p class="meta-line">Phone: ${phone}</p>` : ""}
+            ${
+              email
+                ? `<a class="contact-btn" href="mailto:${email}?subject=Vivesta inquiry">Contact ${name}</a>`
+                : ""
+            }
+          </article>
+        `;
+      }).join("");
+
+      container.innerHTML = `
+        <h2>${list.length} provider${list.length === 1 ? "" : "s"} found</h2>
+        <div class="providers-grid">
+          ${cards}
+        </div>
+      `;
+    }
+
+    function loadProviders() {
+      fetch("/.netlify/functions/providers")
+        .then(res => {
+          if (!res.ok) {
+            throw new Error("Network error: " + res.status);
+          }
+          return res.json();
+        })
+        .then(data => {
+          allProviders = data || [];
+          renderProviders(allProviders);
+        })
+        .catch(err => {
+          console.error(err);
+          const container = document.getElementById("providers-list");
+          container.innerHTML = `
+            <h2 class="error">Error loading providers</h2>
+            <p class="error">Please try again later.</p>
+          `;
+        });
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      loadProviders();
+
+      document.querySelectorAll(".pill").forEach(pill => {
+        pill.addEventListener("click", () => {
+          const service = pill.dataset.service;
+          applyFilter(service);
+        });
+      });
+    });
+  </script>
+</body>
+</html>
