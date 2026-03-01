@@ -1,47 +1,182 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2575.7">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+  <meta charset="UTF-8" />
+  <title>Service providers | Vivesta</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #f5f5f7;
+      color: #111827;
+    }
+
+    header {
+      background: #111827;
+      color: white;
+      padding: 16px 24px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 20px;
+    }
+
+    main {
+      max-width: 960px;
+      margin: 32px auto;
+      padding: 0 16px 40px;
+    }
+
+    .intro {
+      margin-bottom: 24px;
+    }
+
+    .intro p {
+      margin: 4px 0;
+    }
+
+    #providers-list h2 {
+      margin-top: 0;
+      font-size: 22px;
+    }
+
+    .providers-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+      margin-top: 16px;
+    }
+
+    .provider-card {
+      background: white;
+      border-radius: 10px;
+      padding: 16px 18px;
+      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+      border: 1px solid #e5e7eb;
+    }
+
+    .provider-card h3 {
+      margin: 0 0 6px;
+      font-size: 18px;
+      color: #111827;
+    }
+
+    .meta-line {
+      margin: 2px 0;
+      font-size: 14px;
+      color: #4b5563;
+    }
+
+    .contact-btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 12px;
+      font-size: 14px;
+      border-radius: 9999px;
+      background: #2563eb;
+      color: white;
+      text-decoration: none;
+    }
+
+    .contact-btn:hover {
+      background: #1d4ed8;
+    }
+
+    .error {
+      color: #b91c1c;
+    }
+
+    .loading {
+      color: #6b7280;
+    }
   </style>
 </head>
 <body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html lang="en"&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;Providers – Vivesta&lt;/title&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;style&gt;/* Same global styles */&lt;/style&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p1">&lt;body&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;header&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;h1&gt;Providers&lt;/h1&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;a href="index.html"&gt;← Home&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/header&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;main&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;section&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;h2&gt;House Cleaning (3 providers)&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="provider-card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3&gt;Marie Dubois&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;$28/hr · Bilingual · Gatineau (Hull, Aylmer) · &lt;span class="pill"&gt;4.8 stars&lt;/span&gt; (3 reviews)&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Weekly/bi-weekly cleaning for seniors. PEFSAD friendly.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="mailto:marie@cleanhomes.ca"&gt;Contact Marie&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;!-- Add 2 more sample cards from your Airtable data --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;section&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;h2&gt;Filter by service&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;button class="pill"&gt;House Cleaning&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;button class="pill"&gt;Groceries&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;button class="pill"&gt;Meal Prep&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/main&gt;</p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+  <header>
+    <h1>Service providers</h1>
+  </header>
+
+  <main>
+    <section class="intro">
+      <p>Browse vetted service providers available in your area.</p>
+      <p>This list is powered by our internal Airtable directory.</p>
+    </section>
+
+    <section id="providers-list">
+      <h2 class="loading">Loading providers…</h2>
+    </section>
+  </main>
+
+  <script>
+    let allProviders = [];
+
+    function renderProviders(list) {
+      const container = document.getElementById('providers-list');
+
+      if (!list || !list.length) {
+        container.innerHTML = `
+          <h2>No providers yet</h2>
+          <p>Please check back soon.</p>
+        `;
+        return;
+      }
+
+      const cards = list.map(p => {
+        const name = p.Name || "Provider";
+        const services = p.Services || "";
+        const phone = p.Phone || "";
+        const email = p.Email || "";
+        const rate = p.Rate || "";
+        const area = p.Area || "Gatineau";
+
+        return `
+          <article class="provider-card">
+            <h3>${name}</h3>
+            <p class="meta-line">${rate ? rate + " · " : ""}${area}</p>
+            ${services ? `<p class="meta-line">${services}</p>` : ""}
+            ${phone ? `<p class="meta-line">Phone: ${phone}</p>` : ""}
+            ${email
+              ? `<a class="contact-btn" href="mailto:${email}?subject=Vivesta inquiry">Contact ${name}</a>`
+              : ""
+            }
+          </article>
+        `;
+      }).join("");
+
+      container.innerHTML = `
+        <h2>${list.length} provider${list.length === 1 ? "" : "s"} found</h2>
+        <div class="providers-grid">
+          ${cards}
+        </div>
+      `;
+    }
+
+    function loadProviders() {
+      fetch("/.netlify/functions/providers")
+        .then(res => {
+          if (!res.ok) {
+            throw new Error("Network error: " + res.status);
+          }
+          return res.json();
+        })
+        .then(data => {
+          allProviders = data;
+          renderProviders(allProviders);
+        })
+        .catch(err => {
+          console.error(err);
+          const container = document.getElementById("providers-list");
+          container.innerHTML = `
+            <h2 class="error">Error loading providers</h2>
+            <p class="error">Please try again later.</p>
+          `;
+        });
+    }
+
+    document.addEventListener("DOMContentLoaded", loadProviders);
+  </script>
 </body>
 </html>
