@@ -1,38 +1,170 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2575.7">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+  <meta charset="UTF-8">
+  <title>Government Subsidies – Vivesta</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    :root {
+      --bg: #f5f5f7;
+      --text: #111827;
+      --muted: #4b5563;
+      --accent: #2563eb;
+      --accent-dark: #1d4ed8;
+      --card: #ffffff;
+      --border: #e5e7eb;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    header {
+      background: #111827;
+      color: white;
+      padding: 16px 16px 18px;
+    }
+
+    .header-inner {
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 20px;
+    }
+
+    header a {
+      color: #e5e7eb;
+      font-size: 13px;
+      text-decoration: none;
+    }
+
+    header a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 20px auto 32px;
+      padding: 0 16px;
+      display: grid;
+      gap: 16px;
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      box-shadow: 0 8px 18px rgba(15, 23, 42, 0.06);
+      padding: 18px 18px 20px;
+    }
+
+    h2 {
+      margin: 0 0 8px;
+      font-size: 18px;
+    }
+
+    p {
+      margin: 4px 0;
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    a {
+      color: #2563eb;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .disclaimer {
+      font-size: 12px;
+      color: #6b7280;
+      border-radius: 10px;
+      border: 1px solid #e5e7eb;
+      background: #f9fafb;
+      padding: 10px 12px;
+    }
   </style>
 </head>
 <body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html lang="en"&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;Government Subsidies – Vivesta&lt;/title&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p1">&lt;body&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;header&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;h1&gt;Government Subsidies&lt;/h1&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;a href="index.html"&gt;← Home&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/header&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;main&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;section&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;h2&gt;PEFSAD (Aide domestique)&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;Financial assistance for domestic help like cleaning and meal prep. Can reduce hourly rates from $30 to $10–15.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;&lt;strong&gt;Official link:&lt;/strong&gt; &lt;a href="https://www.ramq.gouv.qc.ca/fr/citoyens/programmes-aide/aide-domestique"&gt;RAMQ PEFSAD&lt;/a&gt;&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Add 2 more programs + your full disclaimer --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="disclaimer"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;strong&gt;Disclaimer:&lt;/strong&gt; Vivesta provides general information only. We do not determine eligibility or provide advice.</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/main&gt;</p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+  <header>
+    <div class="header-inner">
+      <h1>Government subsidies</h1>
+      <a href="index.html">← Back to home</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>PEFSAD (Aide domestique)</h2>
+      <p>
+        Financial assistance program in Quebec that helps reduce the cost of eligible domestic help,
+        such as house cleaning and some daily living tasks for seniors.
+      </p>
+      <p>
+        Depending on your situation and income, the hourly rate for approved services may be reduced
+        significantly compared to paying entirely out of pocket.
+      </p>
+      <p>
+        <strong>Official information:</strong>
+        <a href="https://www.ramq.gouv.qc.ca/fr/citoyens/programmes-aide/aide-domestique" target="_blank" rel="noopener">
+          RAMQ – Aide domestique (PEFSAD)
+        </a>
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Tax credit for home-support services for seniors</h2>
+      <p>
+        Quebec offers a refundable tax credit for certain home-support services for people aged 70 and over,
+        which can apply to housekeeping, meal preparation, and similar services.
+      </p>
+      <p>
+        The amount depends on your age, family income, and eligible expenses. It is usually claimed when
+        you file your provincial income tax return.
+      </p>
+      <p>
+        <strong>Official information:</strong>
+        See Revenu Québec’s page on the
+        <a href="https://www.revenuquebec.ca" target="_blank" rel="noopener">
+          tax credit for home-support services for seniors
+        </a>.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>How Vivesta fits in</h2>
+      <p>
+        Vivesta is a simple directory of local providers. Some providers may be able to work with
+        PEFSAD-approved agencies or services that qualify for the provincial tax credit.
+      </p>
+      <p>
+        Always confirm with the provider and the relevant government body whether a specific service,
+        rate, or arrangement is eligible before you rely on any subsidy.
+      </p>
+    </section>
+
+    <section class="disclaimer">
+      <strong>Disclaimer:</strong>
+      Vivesta provides general information only. This is not financial, legal, or tax advice, and we do not
+      determine eligibility for any program. Always consult the official government sources or a qualified
+      professional before making decisions.
+    </section>
+  </main>
 </body>
 </html>
