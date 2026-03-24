@@ -249,7 +249,7 @@
         return `
           <article class="provider-card">
             <h3>${name}</h3>
-            <p class="meta-line">${rate ? rate + " · " : ""}${area}</p>
+            <p class="meta-line">${rate ? "$" + rate + "/h · " : ""}${area}</p>
             ${services ? `<p class="meta-line">${services}</p>` : ""}
             ${phone ? `<p class="meta-line">Phone: ${phone}</p>` : ""}
             ${
