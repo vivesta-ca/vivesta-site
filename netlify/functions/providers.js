@@ -12,7 +12,18 @@ exports.handler = async function(event, context) {
       }
     });
 
-    const providers = response.data.records.map(r => r.fields);
+    const providers = response.data.records.map(r => {
+      const fields = r.fields;
+      return {
+        Name: fields['Provider Name'],
+        Services: fields['Service Types'] ? (Array.isArray(fields['Service Types']) ? fields['Service Types'].join(', ') : fields['Service Types']) : '',
+        Phone: fields['Phone Number'],
+        Email: fields['Email'],
+        Address: fields['Address'],
+        Rate: fields['Hourly Rate'],
+        Area: fields['Coverage Areas'] ? (Array.isArray(fields['Coverage Areas']) ? fields['Coverage Areas'].join(', ') : fields['Coverage Areas']) : 'Gatineau'
+      };
+    });
 
     return {
       statusCode: 200,
